@@ -26,17 +26,13 @@ const DummyValues = [
 ];
 
 function App() {
-  const [values, setValue] = useState(DummyValues);
+  const[values, addValue] = useState(DummyValues);
 
   const addExpenseHandler = (expense) => {
-    console.log(`Values: ${values}`);
-    console.log(`expense: ${expense}`);
-    setValue(...values, expense)
-    
-    // addValue((prevExpenses) => {
-    //   return [expense, ...prevExpenses];
-    // })
+    addValue(prevExpenses => {
+      return [expense, ...values]})
   };
+
 
   return (
     <div>
@@ -46,7 +42,7 @@ function App() {
       </div>
       <br />
       <br />
-      <ExpenseList values={values} />
+      <ExpenseList  values = {values}/>
     </div>
   );
 }
