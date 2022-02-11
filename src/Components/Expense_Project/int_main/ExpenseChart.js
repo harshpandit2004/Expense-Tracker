@@ -24,7 +24,7 @@ const ExpenseChart = (props) => {
     const expenseMonth = expense.date.getMonth();
     console.log("Value of the Month from the chart date:");
     console.log(chartDataPoints[expenseMonth].value);
-    chartDataPoints[expenseMonth].value += props.expense;
+    chartDataPoints[expenseMonth].value += expense.expense;
     console.log("Value of the Month after addition:");
     console.log(chartDataPoints[expenseMonth].value);
     console.log("Value of the array in expense chart after the loop:");
