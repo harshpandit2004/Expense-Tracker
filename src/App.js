@@ -1,41 +1,41 @@
 import React, { useState } from "react";
-import ExpenseList from "./Components/Expense_Project/List/ExpenseList";
+import ExpenseList from "./Components/Expense_Project/List/Expenses";
 import NewExpenses from "./Components/Expense_Project/Add Expenses/NewExpenses";
 
 const DummyValues = [
   {
-    date: "31.1.22",
+    id: "e1",
+    date: new Date(2021, 7, 14),
     reason: "Protien Intake",
     expense: 720,
   },
   {
-    date: "22.33.33",
+    id: "e2",
+    date: new Date(2020, 7, 14),
     reason: "Miscellaneous",
     expense: 550,
   },
   {
-    date: "22.33.33",
+    id: "e3",
+    date: new Date(2021, 7, 14),
     reason: "Playstation",
     expense: 550,
   },
   {
-    date: "22.33.33",
+    id: "e4",
+    date: new Date(2021, 7, 15),
     reason: "Internet Recharge",
     expense: 550,
   },
 ];
 
 function App() {
-  const [values, setValue] = useState(DummyValues);
+  const [values, addValue] = useState(DummyValues);
 
   const addExpenseHandler = (expense) => {
-    console.log(`Values: ${values}`);
-    console.log(`expense: ${expense}`);
-    setValue(...values, expense)
-    
-    // addValue((prevExpenses) => {
-    //   return [expense, ...prevExpenses];
-    // })
+    console.log(expense);
+    addValue(prevExpenses => {
+      return [expense, ...values]})
   };
 
   return (
