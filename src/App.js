@@ -5,27 +5,39 @@ import NewExpenses from "./Components/Expense_Project/Add Expenses/NewExpenses";
 const DummyValues = [
   {
     id: "e1",
-    date: new Date(2021, 7, 14),
-    reason: "Protien Intake",
-    expense: 720,
+    date: new Date(2019, 0, 14),
+    reason: "Groceries",
+    expense: 353,
+  },
+  {
+    id: "e1",
+    date: new Date(2019, 10, 14),
+    reason: "That damn door",
+    expense: 3530,
   },
   {
     id: "e2",
     date: new Date(2020, 7, 14),
     reason: "Miscellaneous",
-    expense: 550,
+    expense: 842,
+  },
+  {
+    id: "e1",
+    date: new Date(2021, 10, 14),
+    reason: "Mr. Ditkovitch's Rent",
+    expense: 353,
   },
   {
     id: "e3",
-    date: new Date(2021, 7, 14),
-    reason: "Playstation",
-    expense: 550,
+    date: new Date(2021, 11, 14),
+    reason: "Gaming Shenanigans",
+    expense: 863,
   },
   {
     id: "e4",
-    date: new Date(2021, 7, 15),
+    date: new Date(2021, 2, 15),
     reason: "Internet Recharge",
-    expense: 550,
+    expense: 149,
   },
 ];
 
@@ -41,7 +53,7 @@ function App() {
   return (
     <div>
       <div className="header">
-        <h1>Yea, im doing the maxmillan project</h1>
+        {/* <h1>Yea, im doing the maxmillan project</h1> */}
         <NewExpenses onAddExpense={addExpenseHandler} />
       </div>
       <br />
